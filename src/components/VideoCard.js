@@ -1,7 +1,6 @@
 import React from 'react'
 
 const VideoCard = ({info}) => {
-    console.log(info);
   const {snippet, statistics} = info;
   const { channelTitle, title, thumbnails } = snippet;
  
@@ -15,6 +14,14 @@ const VideoCard = ({info}) => {
         </ul>
     </div>
   )
+}
+
+export const AdVideoCard = ({info}) => {
+    return(
+        <div className='hover:opacity-50 cursor-pointer'>
+            <VideoCard info={info}/>
+        </div>
+    )
 }
 
 export default VideoCard
